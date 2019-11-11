@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `responsible` (
    `name` varchar(180) NOT NULL,
    `email` varchar(180) NOT NULL,
    `password` varchar(60) NOT NULL,
+   `picture` varchar(200) NOT NULL,
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -25,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `child` (
   `gender` enum('f','m') NOT NULL,
   `responsible_id` int(8) NOT NULL,
   `classification_id` int(8) NOT NULL,
+  `picture` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_child_responsible_idx` (`responsible_id`),
   KEY `fk_child_classification1_idx` (`classification_id`),
