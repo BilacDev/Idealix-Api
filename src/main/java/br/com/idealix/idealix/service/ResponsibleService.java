@@ -28,15 +28,4 @@ public class ResponsibleService {
     public void deleteResponsible(Long id) {
         repository.deleteById (id);
     }
-
-//    public void editResponsible(Responsible responsible) {
-//        repository.save(responsible);
-//    }
-
-//    public Responsible edit(Responsible newResponsible, Long id) {
-//        Responsible responsible = dao.findOne(id);
-//        responsible.setName(newResponsible.getName());
-//        // Fazer a linha de cima para todos os campos que quer atualizar
-//        return dao.save(responsible);
-//    }
 }

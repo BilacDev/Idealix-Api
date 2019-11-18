@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "38b5d882-508c-492b-b30a-3d85b99b023b",
+		"name": "Idealix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "responsibleFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/responsible",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"responsible"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "responsibleById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/responsible/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"responsible",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "childById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/child/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"child",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "childFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/child",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"child"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "classificationFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/classification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "classificationById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/classification/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classification",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createChild",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Criança Teste\",\n\t\"birthday\": \"2000-12-04\",\n\t\"gender\": \"f\",\n\t\"responsible_id\": 1,\n\t\"classification_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/child/create-child",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"child",
+						"create-child"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createResponsible",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Responsável Teste\",\n\t\"email\": \"teste@teste.com.br\",\n\t\"password\": \"fd782124\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/responsible/create-responsible",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"responsible",
+						"create-responsible"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historyFindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/history/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historyFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"age\": 4,\n\t\"height\": 1.45,\n\t\"weight\": 1.45,\n\t\"child_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/history/create-history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"create-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteResponsible",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/responsible/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"responsible",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteChild",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/child/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"child",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteHistory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/history/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"history",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createClassification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"age\": 5,\n\t\"height\": 1,\n\t\"weight\": 1,\n\t\"gender\": \"f\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/classification/create-classification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classification",
+						"create-classification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteClassification",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/classification/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classification",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

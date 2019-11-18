@@ -34,23 +34,4 @@ public class ResponsibleController {
         responsibleService.deleteResponsible(id);
     }
 
-//    @RequestMapping(value = "/responsible/edit/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-//    public void editResponsible(@RequestBody Responsible responsible) {
-//        responsibleService.editResponsible(responsible);
-//    }
-
-//    @RequestMapping(value = "/responsible/edit/{id}", method = RequestMethod.PUT)
-//    public Responsible editResponsible(@PathVariable("id") Long id, Model model) {
-//        System.out.println(id);
-//        Responsible responsible = responsibleService.getResponsible(id);
-//        model.addAttribute("responsible", responsible);
-//
-//        return responsibleService.saveResponsible(responsible);
-//    }
-//
-//    @RequestMapping("/update")
-//    public String update(Responsible responsible) {
-//        responsibleService.saveResponsible(responsible);
-//        return "redirect:listarpessoas";
-//    }
 }

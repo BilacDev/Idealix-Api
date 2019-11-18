@@ -28,4 +28,9 @@ public class ChildController {
     public Child createChild(@RequestBody Child child) {
         return childService.saveChild(child);
     }
+
+    @RequestMapping(value = "/child/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public void deleteChild(@PathVariable Long id) {
+        childService.deleteChild(id);
+    }
 }

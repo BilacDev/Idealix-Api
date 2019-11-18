@@ -28,4 +28,9 @@ public class ClassificationController {
     public Classification createClassification(@RequestBody Classification classification) {
         return classificationService.saveClassification(classification);
     }
+
+    @RequestMapping(value = "/classification/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public void deleteClassification(@PathVariable Long id) {
+        classificationService.deleteClassification(id);
+    }
 }

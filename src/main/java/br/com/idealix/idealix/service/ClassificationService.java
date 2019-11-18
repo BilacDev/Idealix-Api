@@ -24,4 +24,8 @@ public class ClassificationService {
     public Classification saveClassification(Classification classification) {
         return repository.save(classification);
     }
+
+    public void deleteClassification(Long id) {
+        repository.deleteById (id);
+    }
 }

@@ -24,11 +24,10 @@ public class History implements Serializable {
     @NotNull
     private Long weight;
 
-    @NotNull
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
 
-    //    @NotNull
+//    @NotNull
 //    @ManyToOne
 //    @JoinColumn(name = "child_id")
     private int child_id;
@@ -65,12 +64,12 @@ public class History implements Serializable {
         this.weight = weight;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 
     public int getChild_id() {

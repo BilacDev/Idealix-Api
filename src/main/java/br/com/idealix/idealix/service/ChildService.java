@@ -24,4 +24,8 @@ public class ChildService {
     public Child saveChild(Child child) {
         return repository.save(child);
     }
+
+    public void deleteChild(Long id) {
+        repository.deleteById (id);
+    }
 }

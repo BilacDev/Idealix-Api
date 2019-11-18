@@ -28,4 +28,9 @@ public class HistoryController {
     public History createHistory(@RequestBody History history) {
         return historyService.saveHistory(history);
     }
+
+    @RequestMapping(value = "/history/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public void deleteHistory(@PathVariable Long id) {
+        historyService.deleteHistory(id);
+    }
 }

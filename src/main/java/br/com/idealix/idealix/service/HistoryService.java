@@ -24,4 +24,8 @@ public class HistoryService {
     public History saveHistory(History history) {
         return repository.save(history);
     }
+
+    public void deleteHistory(Long id) {
+        repository.deleteById (id);
+    }
 }
